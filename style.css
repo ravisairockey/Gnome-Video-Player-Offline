@@ -1,0 +1,129 @@
+:root {
+    --bg-dark: #1a1c2c;
+    --bg-light: #2e3047;
+    --text-primary: #f1f1f1;
+    --text-secondary: #a9a9a9;
+    --accent: #7d5afc;
+    --border: #4a4e69;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 20px;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+header h1 {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+#main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#video-player-section {
+    flex: 3 1 600px;
+}
+
+#playlist-section {
+    flex: 2 1 300px;
+    max-height: 75vh;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#video-player {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+#current-video-title {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#controls, #meta-controls {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    align-items: center;
+}
+
+button, select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent);
+}
+
+#notes-input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}
+
+.course-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--accent);
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.video-item {
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-item:hover {
+    background-color: var(--border);
+}
+
+.video-item.active {
+    background-color: var(--accent);
+    color: var(--bg-dark);
+}
+
+.status {
+    font-size: 0.8em;
+    padding: 2px 6px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.status.To-Watch { background-color: #f0c674; }
+.status.Watching { background-color: #81a1c1; }
+.status.Completed { background-color: #78c2ad; }
